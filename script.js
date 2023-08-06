@@ -1,4 +1,4 @@
-// DOM
+// DOM - begin each project with visualising which elements on the page need to be interactive and assign them to const within the JS
 
 const rock = document.getElementById("rock-el")
 const paper = document.getElementById("paper-el")
@@ -9,6 +9,8 @@ const cScore = document.getElementById("cscore-el")
 
 
 // event listeners
+
+// event listeners are the starting block for the functions within the webpage - good to remember that as I struggled with understanding how to initiate functions 
 
 rock.addEventListener("click", function(){
     playerChoice("Rock")
@@ -80,18 +82,16 @@ function updateScore (){
 }
 
 
-
 function updateMessage (){
     if (playerScore === 5){
         alert("You Win!")
         endGame()
     } else if (computerScore === 5){
-        alert("You Win")
+        alert("You Lost!")
         endGame()
     }
 
 }
-
 
 function endGame (){
     rock.disabled = "true"
@@ -100,6 +100,7 @@ function endGame (){
 }
 
     
+
 
     
 
